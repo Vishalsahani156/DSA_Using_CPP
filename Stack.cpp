@@ -1,69 +1,72 @@
 #include<iostream>
 #include<iomanip>
-using namespace space std;
+using namespace std;
 class stacks{
-    public:
+    private:
     int capacity;
-    int top;
     int *ptr;
+    int top;
     public:
     stacks(int);
-    bool underflow();
-    bool overflow();
-     void push(int);
-    int  peek(); 
-    void pop();
+    bool Overflow();
+    bool Underflow();
+    void push(int);
+    int peek();
+    int  pop();
     ~stacks();
-    int reversStack();
-
+    void revers();
 };
-stacks::stacks(){
-    top=-1;
-    ptr=NULL;
-    capacity[6];
-}
-bool stacks::underflow(){
-    return top==-1;
-
-}
-bool stacks::overflow(){
-    return top==capacity;
-
-}
-void stacks::push(int data){
-    ptr->capacity=[data];
-    top++;
-
-    
-}
- int stacks::peek(){
-    for(int i=0;i<ptr->[capacity];i++){
-        if(i==top)
-        return top;
+stacks::stacks(int cap;){
+if(cap>0){
+    cout<<" invalide size please enter the valide size"<<endl;
     }
+    capacity=cap;
+    ptr =new int [capacity];
+    top=-1;
 }
-void stacks::pop(){
-    for(int i=0;i<ptr->[capacity];i++){
-        if(i==top){
-            for(int j=0;j<top;j++){
-                capacity[j]=capacity[j+1];
-            }
-        }
+// overflow minse array is empty 
+bool stacks:: Overflow(){
+   return top==-1; 
+}
+// underflow minse array is the full 
+bool stacks::Underflow(){
+    return top==capacity -1;
+
+}
+// push minse add the data 
+void stacks::push(int data){
+    if(Overflow()){
+        cout<<"array is  full"<<endl;
+    }
+     top++;
+    ptr[top]=data;
+   
+}
+int stacks::peek(){
+    if(Underflow()){
+        throw "array is empty ";
+    }
+   return ptr [top];
+}
+int  stacks::pop(){
+    if(Underflow()){
+        cout<<" cant pop the element from the array "<<endl;
+        cout<<"aaray is empty "<<endl;
     }
     top--;
+  return ptr[top];
 }
 ~stacks::stacks(){
-    if(underflow){
-        pop();
-
-    }
-    delete ptr;
-    
+    delete ptr[];
 }
-int stacks::reversStack(){
-  for(int i=0;i>top;i--){
-    return top;
-  }
+void revers(){
+    if(Underflow()){
+        cout<<"Empty array"<<endl;
+    }
+    int t;
+    for(int i=0;i<(=top/2)+1;i++){
+       t[i]=t[i];
+    }
 }
 int main(){
 

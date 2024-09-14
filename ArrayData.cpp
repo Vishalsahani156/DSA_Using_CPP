@@ -56,7 +56,7 @@ void Array::Delete(int index){
     }
     else{
         if(ptr[index]==last_index)
-        for(int i=index;i>l=last_index;i++){
+        for(int i=index;i>last_index;i++){
           ptr[i]=ptr[i+1];
     }
     last_index--;
@@ -76,7 +76,7 @@ int Array::coutEl(){
 return int data=last_index+1;
 }
 Array::~Array(){
-    ptr[];
+   delete ptr[];
 
 }
 int indexRetur(int index){

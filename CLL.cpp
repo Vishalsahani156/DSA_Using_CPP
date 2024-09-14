@@ -17,7 +17,7 @@ class CLL{
  void deleteLa();
  ~CLL();
 
-}
+};
 // this is the constructor to insilaize the last pointer with null
 CLL::CLL(){
     last=NULL;
