@@ -13,8 +13,10 @@ class stacks{
     void push(int);
     int peek();
     int  pop();
+    int getsize();
     ~stacks();
     void revers();
+    void reversstackNotMember(stacks &);
 };
 stacks::stacks(int cap;){
 if(cap>0){
@@ -63,10 +65,20 @@ void revers(){
     if(Underflow()){
         cout<<"Empty array"<<endl;
     }
-    int t;
-    for(int i=0;i<(=top/2)+1;i++){
-       t[i]=t[i];
+    int t;  
+    for(int i=0;i<(=top+1)/2;i++){
+       t[i]=ptr[i];
     }
+}
+int stacks::getsize(){
+    return top+1;
+}
+void stacks::reversstackNotMember(stacks &s){
+    stacks *tempstak=new stacks(s.getsize())
+    while(!s.isEmpty()){
+        tempstak->public(s.pop());
+    }
+    s=*tempstak;
 }
 int main(){
 
