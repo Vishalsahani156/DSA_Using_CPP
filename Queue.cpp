@@ -26,30 +26,36 @@ Queue::Queue(int size){
     real=-1;    
 }
 bool::Queue::overflow(){ // this minse queue is full 
-    return front==cap-1;
+return real==cap-1;
 }
 bool Queue::underfrow(){  // this minse can not full  the queue 
-   return real ==-1;
+   return real==-1;
 }
 void Queue::insertReal(int data){
-    if(overflow())
-    cout<<" Queue is full "<<endl;
-   else{
-    ptr[real]=data;
-    real=front;
-
-   }
+    if(front==0 &&real==cap-1 || real>front-1)
+       cout<<"overflow"<<endl;
+    else if(real==-1){
+     real=front++;
+     ptr[real]=data;
+    }
+    else if(real>=cap-1){
+        real++;
+        ptr[real]=data;
+    }
+    else{
+        real=0;
+        ptr[real]=data;
+    }
 }
 int Queue::viewReal(){
-    if(underfrow){
-        return -1;
-    }
-    return ptr[real];
+    if(underfrow())
+    return -1;
+return ptr->real;
 }
 int Queue::viewFront(){
     if(underfrow())
     return -1;
-  return ptr[front];
+  return ptr->front;
 }
 void Queue::deleteFront(){
     if(underfrow())
@@ -57,30 +63,32 @@ void Queue::deleteFront(){
         cout<<"Queue is empty can not delete the elements "<<endl;
         
     }
+    int data=ptr->front;
+    else if(real==front){
+       real=front=-1;
+    return data;
+    }
     else{
-        int data=ptr[front];
-        int temp;
-        if(front==real){
-            delete [front];
-            real=-1;
-            real=front;
-            return data;
-        }
-        temp=front;
-        delete[temp];
-        front--;
+        front++;
         return data;
     }
+
 }
 ~Queue::Queue(){
-    if(underfrow()){
+    if(!(front==0&&real==cap-1||real>front-1)){
         deleteFront();
     }
     delete []ptr;
 }
 int Queue:: coutElement(){
-    return front+1;
-    
+    int getcoutel=0;
+    if(!underfrow()){
+        getcoutel++;
+        deleteFront();
+    }
+    return getcoutel;
+    // second logic 
+    return real+1;
 }
 int main(){
     return 0;
