@@ -81,6 +81,5 @@ void stacks::reversstackNotMember(stacks &s){
     s=*tempstak;
 }
 int main(){
-
     return 0;
 }

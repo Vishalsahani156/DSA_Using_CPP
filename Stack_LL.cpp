@@ -68,7 +68,6 @@ int Stack::revers(){
     while(top!=NULL){
         int k=top->item;
         pop();
-
     }
     return k;
 }
@@ -93,8 +92,6 @@ int Stack::revers(){
     return false;
   }
   return true;
-
-    
 }
 int main(){
 
