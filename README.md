@@ -39,42 +39,7 @@ GeeksforGeeks
 Reddit
 +7
 Reddit
-+7
 
-Heaps
-Min Heap
-
-Max Heap
-
-Graphs
-Graph Representations (Adjacency Matrix and List)
-
-Depth-First Search (DFS)
-
-Breadth-First Search (BFS)
-
-Sorting Algorithms
-Bubble Sort
-
-Selection Sort
-
-Insertion Sort
-
-Merge Sort
-
-Quick Sort
-Reddit
-+5
-Stack Overflow
-+5
-Stack Overflow
-+5
-Stack Overflow
-+2
-GeeksforGeeks
-+2
-Stack Overflow
-+2
 
 🛠️ Technologies Used
 C++: Primary programming language for implementing data structures and algorithms.
@@ -104,28 +69,14 @@ data-structures-algorithms-cpp/
 ├── trees/
 │   ├── binary_search_tree.cpp
 │   └── avl_tree.cpp
-├── heaps/
-│   ├── min_heap.cpp
-│   └── max_heap.cpp
-├── graphs/
-│   ├── adjacency_matrix.cpp
-│   ├── adjacency_list.cpp
-│   ├── dfs.cpp
-│   └── bfs.cpp
-├── sorting_algorithms/
-│   ├── bubble_sort.cpp
-│   ├── selection_sort.cpp
-│   ├── insertion_sort.cpp
-│   ├── merge_sort.cpp
-│   └── quick_sort.cpp
-└── README.md
+
 🚀 Getting Started
 Clone the repository:
 
 bash
 Copy
 Edit
-git clone https://github.com/yourusername/data-structures-algorithms-cpp.git
+git clone https://github.com/Vishalsahani156/DSA_Using_CPP/new/pinck
 cd data-structures-algorithms-cpp
 Compile and run a program:
 
